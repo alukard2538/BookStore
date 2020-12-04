@@ -22,7 +22,7 @@ namespace BookStore.Cart
         {
             var order = new Order(items);
             bool isDelivery = order.OrderItems
-                .Where(oi => ((oi.Item.CheckType() == ProductType.PaperBook) | (oi.Item.CheckType() == ProductType.PaperJournal)))
+                .Where(item => item.Item.IsDelivery == true)
                 .Count() != 0;
             order.DeliveryPrice = isDelivery ? _deliveryCalculator.GetDeliveryPrice(items) : 0;
 

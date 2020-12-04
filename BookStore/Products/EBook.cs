@@ -10,11 +10,13 @@ namespace BookStore.Products
         public string Author { get; }
         public decimal Price { get; }
         public ProductType Type = ProductType.EBook;
+        public bool IsDelivery { get; }
         public EBook(string name, string author, decimal price)
         {
             Name = name;
             Author = author;
             Price = price;
+            IsDelivery = false;
         }
 
         public ProductType CheckType()

@@ -212,21 +212,25 @@ namespace BookStore
         static void TenPercentForJournals()
         {
             List<IProduct> books = new List<IProduct>();
-
-            PaperJournal WhiteDwarf1 = new PaperJournal("WhiteDwarf1", "GW", 500, 2019, 12);
+            
+            PaperJournal WhiteDwarf1 = new PaperJournal("WhiteDwarf1", "GW", 100, 2020, 1);
             books.Add(WhiteDwarf1);
 
-            PaperJournal WhiteDwarf2 = new PaperJournal("WhiteDwarf2", "GW", 500, 2020, 1);
+            PaperJournal WhiteDwarf2 = new PaperJournal("WhiteDwarf2", "GW", 200, 2020, 3);
             books.Add(WhiteDwarf2);
 
-            PaperJournal WhiteDwarf3 = new PaperJournal("WhiteDwarf3", "GW", 500, 2019, 4);
+            PaperJournal WhiteDwarf3 = new PaperJournal("WhiteDwarf3", "GW", 300, 2020, 5);
             books.Add(WhiteDwarf3);
 
-            PaperJournal WhiteDwarf4 = new PaperJournal("WhiteDwarf4", "GW", 500, 2019, 5);
+            PaperJournal WhiteDwarf4 = new PaperJournal("WhiteDwarf4", "GW", 400, 2020, 6);
             books.Add(WhiteDwarf4);
 
-            PaperJournal WhiteDwarf5 = new PaperJournal("WhiteDwarf5", "GW", 500, 2019, 6);
+            PaperJournal WhiteDwarf5 = new PaperJournal("WhiteDwarf5", "GW", 500, 2020, 7);
             books.Add(WhiteDwarf5);
+
+            PaperJournal WhiteDwarf6 = new PaperJournal("WhiteDwarf5", "GW", 500, 2020, 9);
+            books.Add(WhiteDwarf6);
+
 
             DeliveryCalculator calculator = new DeliveryCalculator();
             ActionProvider provider = new ActionProvider();
@@ -276,10 +280,10 @@ namespace BookStore
             CheckBug();
             Console.WriteLine("Должна быть - 640");
             Console.WriteLine("----------------------------------------------------------------------");
-            Console.WriteLine("Проверка акции на скидку 10% при покупке трёх или больее выпусков журнала, идущих подряд");
+            Console.WriteLine("Проверка акции на скидку 10% при покупке трёх или более выпусков журнала, идущих подряд");
             Console.Write("Получилась цена - ");
             TenPercentForJournals();
-            Console.WriteLine("Должна быть - 2350");
+            Console.WriteLine("Должна быть - 1880");
             Console.WriteLine("----------------------------------------------------------------------");
 
         }

@@ -9,6 +9,7 @@ namespace BookStore.Products
         string Name { get; }
         string Author { get;  }
         decimal Price { get; }
+        bool IsDelivery { get; }
 
         public ProductType CheckType();
     }

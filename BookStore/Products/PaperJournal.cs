@@ -11,6 +11,8 @@ namespace BookStore.Products
         public decimal Price { get; }
         public int Year { get; }
         public int Month { get; }
+        public bool IsDelivery { get; }
+        public int DateInMonths { get; }
         public ProductType Type = ProductType.PaperJournal;
         public PaperJournal(string name, string author, decimal price, int year, int month)
         {
@@ -19,7 +21,9 @@ namespace BookStore.Products
             Price = price;
             Year = year;
             Month = month;
-        }
+            DateInMonths = year * 12 + month;
+            IsDelivery = true;
+    }
         public ProductType CheckType()
         {
             return Type;

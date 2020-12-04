@@ -8,12 +8,14 @@ namespace BookStore.Products
         public string Author { get; }
         public decimal Price { get; }
         public ProductType Type = ProductType.PaperBook;
+        public bool IsDelivery { get; }
         public PaperBook(string name, string author, decimal price)
         {
             Name = name;
             Author = author;
             Price = price;
-        }
+            IsDelivery = true;
+    }
         public ProductType CheckType()
         {
             return Type;

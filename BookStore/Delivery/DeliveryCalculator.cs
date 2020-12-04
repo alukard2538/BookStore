@@ -14,7 +14,7 @@ namespace BookStore.Delivery
         public decimal GetDeliveryPrice(List<IProduct> items)
         {
             var onlyEBooks = items
-                .Where(item => (item.CheckType() == ProductType.PaperBook) | (item.CheckType() == ProductType.PaperJournal))
+                .Where(item => item.IsDelivery == true)
                 .Count() == 0;
 
             if (onlyEBooks) 
