@@ -228,7 +228,7 @@ namespace BookStore
             PaperJournal WhiteDwarf5 = new PaperJournal("WhiteDwarf5", "GW", 500, 2020, 7);
             books.Add(WhiteDwarf5);
 
-            PaperJournal WhiteDwarf6 = new PaperJournal("WhiteDwarf5", "GW", 500, 2020, 9);
+            PaperJournal WhiteDwarf6 = new PaperJournal("WhiteDwarf5", "GW", 500, 2020, 11);
             books.Add(WhiteDwarf6);
 
 

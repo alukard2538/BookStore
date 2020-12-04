@@ -30,7 +30,7 @@ namespace BookStore.Actions
                 }                
                 else 
                 {
-                    if (discountJournals.Count < 2)
+                    if (discountJournals.Count < 3)
                     {
                         discountJournals.Clear();
                         discountJournals.Add(sortedListOfJournals[i]);
